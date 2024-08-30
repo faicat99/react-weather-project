@@ -1,0 +1,107 @@
+.root {
+    --default-font-family: "Montserrat", sans-serif;
+}
+
+header {
+    border-bottom: 1px solid rgb(221, 215, 215);
+    padding: 0 0 20px 0;
+}
+
+.Weather-container {
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 30px 50px rgba(3, 7, 34, 0.8);
+    padding: 50px;
+    border-radius: 5px;
+}
+
+
+.Weather h1 {
+    font-size: 38px;
+    line-height: 48px;
+    color: black;
+    margin: 20px 0 10px;
+}
+
+.Weather .search-form-input {
+    background-color: rgb(221, 215, 215);
+    width: 75%;
+    padding: 15px;
+    font-family: var(--default-font-family);
+    border-radius: 4px;
+}
+
+.Weather .search-form-button {
+    background: black;
+    width: 22%;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.WeatherInfo  {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.WeatherInfo li {
+    font-size: 16px;
+    line-height: 20px;
+    list-style: none;
+    color: grey;
+}
+
+.WeatherInfo ul {
+    padding: 0;
+}
+
+.Weather li strong {
+    color: #f65282;
+}
+
+.WeatherInfo .temperature-container {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.Weather .temperature {
+    font-size: 80px;
+    margin-left: 10px;
+    color: black;
+}
+
+.Weather .unit {
+    font-size: 28px;
+    position: relative;
+    top: -34px;
+    color: color;
+}
+
+footer a {
+    color: black;
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: #f65282; 
+}
+
+footer {
+    border-top: 1px solid rgb(221, 215, 215);
+    padding: 20px 0 0 0;
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+}
