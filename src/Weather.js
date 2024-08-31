@@ -3,16 +3,25 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-    const [ready, SetReady] = useState(false);
-    const [temperature, setTemperature] = useState(null);
+    const [weatherData, setWeatherData] = useState({ready:false});
 
     function handleResponse(response) {
         console.log(response.data);
-        setTemperature(response.data.temperature.current);
-        SetReady(true);
+        setWeatherData({
+            ready: true,
+            city: response.data.city,
+            date: "Friday 18:00",
+            temperature: response.data.temperature.current,
+            description: response.data.condition.description,
+            wind: response.data.wind.speed,
+            humidity: response.data.temperature.humidity,
+            iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+        });
+        
+
     }
 
-    if (ready) {
+    if (weatherData.ready) {
         return (
             <div className="Weather">
             <header>
@@ -24,32 +33,37 @@ export default function Weather() {
             <div className="WeatherInfo">
                 <div className="row">
                     <div className="col-7">
-                        <h1>London</h1>
+                        <h1>{weatherData.city}</h1>
                         <ul>
                             <li>
-                                <span>Friday 21:00</span>
-                                , 
-                                <span>Sunny</span>
+                                <span>{weatherData.date}</span>
+                                , {" "}
+                                <span className="text-capitalize">{weatherData.description}</span>
                                 </li>
                             <li>
                                 <span>
-                                    Humidity:<strong> 40%</strong>
+                                    Humidity:<strong>{weatherData.humidity}%</strong>
                                 </span> 
                                 {" "} 
                                 <span>
-                                    Wind: <strong>5 km/h</strong>
+                                    Wind: <strong>{weatherData.wind}km/h</strong>
                                     </span>
                                     </li>
-                        </ul>
-                        </div>
-                    <div className="col-5">
-                        <div className="temperature-container d-flex justify-content-end">
-                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny" />
-                            <div>
-                            <span className="temperature">{Math.round(temperature)}</span> 
-                            <span className="unit">°C</span>
+                                </ul>
                             </div>
-                    </div>
+                        <div className="col-5">
+                            <div className="clearfix">
+                                <div className="temperature-container d-flex justify-content-end">
+                                    <img 
+                                    src={weatherData.iconUrl} alt={weatherData.description} className="float-left"  />
+                                <div>
+                                    <div className="float-right">
+                                        <span className="temperature">{Math.round(weatherData.temperature)}</span> 
+                                        <span className="unit">°C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
