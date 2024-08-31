@@ -34,7 +34,7 @@ header {
 
 .Weather .search-form-button {
     background: black;
-    width: 22%;
+    width: 23%;
     margin: 5px;
     padding: 15px;
     border-radius: 4px;
@@ -68,25 +68,23 @@ header {
     margin-top: 40px;
 }
 
-.justify-content-end {
-    justify-content: flex-end;
-}
-
-.d-flex {
-    display: flex;
-}
 
 .Weather .temperature {
-    font-size: 80px;
+    font-size: 66px;
     margin-left: 10px;
     color: black;
 }
 
 .Weather .unit {
-    font-size: 28px;
+    font-size: 20px;
     position: relative;
-    top: -34px;
-    color: color;
+    top: -31px;
+    color: black;
+}
+
+.Weather img {
+    position: relative;
+    bottom: 6px;
 }
 
 footer a {
