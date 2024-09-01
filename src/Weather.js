@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 
@@ -28,40 +28,8 @@ export default function Weather(props) {
                     <input type="submit" value="Search" className="search-form-button" />
                 </form>
             </header>
-            <div className="WeatherInfo">
-                <div className="row">
-                    <div className="col-7">
-                        <h1>{weatherData.city}</h1>
-                        <ul>
-                            <li>
-                                <span><FormattedDate date={weatherData.date}/></span>,
-                                {" "}
-                                <span class="text-uppercase">{weatherData.description}</span>
-                            </li>
-                            <li>
-                                <span>Humidity: <strong>{weatherData.humidity}%</strong></span>
-                                {" "} 
-                                <span>Wind: <strong>{weatherData.wind}km/h</strong></span>
-                            </li>        
-                        </ul>          
-                            
-                            </div>
-                        <div className="col-5">
-                            <div className="clearfix">
-                                <div className="temperature-container d-flex justify-content-end">
-                                    <img 
-                                    src={weatherData.iconUrl} alt={weatherData.description} className="float-left"  />
-                                <div>
-                                    <div className="float-right">
-                                        <span className="temperature">{Math.round(weatherData.temperature)}</span> 
-                                        <span className="unit">°C</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <WeatherInfo data={weatherData} />
         </div>
     );
 } else {
