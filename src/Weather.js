@@ -16,7 +16,7 @@ export default function Weather(props) {
             description: response.data.condition.description,
             wind: response.data.wind.speed,
             humidity: response.data.temperature.humidity,
-            iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon_url}.png`
         });
     }
 
@@ -27,7 +27,8 @@ export default function Weather(props) {
     }
 
     function handleSubmit(event) {
-        event.preventDefault();
+        event.preventDefault()
+        search();
     }
 
     function handleCityChange(event) {
