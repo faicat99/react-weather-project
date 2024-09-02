@@ -16,7 +16,7 @@ export default function Weather(props) {
             description: response.data.condition.description,
             wind: response.data.wind.speed,
             humidity: response.data.temperature.humidity,
-            iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon_url}.png`
+            iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${props.data.icon}.png`
         });
     }
 
@@ -33,11 +33,11 @@ export default function Weather(props) {
 
     function handleCityChange(event) {
         setCity(event.target.value);
-    } 
-
+    }    
+    
     if (weatherData.ready) {
         return (
-            <div className="Weather">
+            <div className="Weather-container">
             <header>
                 <form onSubmit={handleSubmit} >
                     <input 
@@ -54,7 +54,7 @@ export default function Weather(props) {
         </div>
     );
 } else {
-    search();
+
     return "Loading...";
 }
 }
