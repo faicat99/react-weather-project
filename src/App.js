@@ -9,9 +9,9 @@ export default function App() {
           <Weather defaultCity="london" />
         <footer>
           This project was coded by {" "}
-          <a href="https://www.github.com/faicatmck">Fainche Mckeown</a>{" "} and is {" "}
-          hosted on {" "} <a href="https://www.github.com/faicatmck"> Github</a>{" "} and {" "}
-          <a href="https://www.netlify.com/faicatmck">Netlify</a>
+          <a href="https://www.github.com/faicat99">Fainche Mckeown</a>{" "} and is {" "}
+          hosted on {" "} <a href="https://www.github.com/faicat99"> Github</a>{" "} and {" "}
+          <a href="https://react-weather-app-react-project.netlify.app/">Netlify</a>
         </footer>
       </div>
     </div>
