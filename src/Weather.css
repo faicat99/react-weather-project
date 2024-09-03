@@ -66,24 +66,24 @@
      margin-top: 55px;
  }
  
- .Weather img {
-     position: relative;
-     bottom: 20px;
+ .Weather canvas {
+     margin-right: 5px;
+     
  }
  
  .Weather .temperature {
      font-size: 80px;
      margin-left: 10px;
      position: relative;
-     bottom: 10px;
+     top: 5px;
      right: 10px; 
      color:#111111;
  }
  
  .Weather .unit {
-     font-size: 19px;
+     font-size: 25px;
      position: relative;
-     top: -50px;
+     top: -35px;
      right: 14px;
      color:#111111;
  }

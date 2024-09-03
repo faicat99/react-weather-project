@@ -1,9 +1,10 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
     return (
-            <div className="Weather WeatherInfo">
+            <div className="WeatherInfo">
                 <div className="row">
                     <div className="col-7">
                         <h1>{props.data.city}</h1>
@@ -20,23 +21,23 @@ export default function WeatherInfo(props) {
                                 <span>Wind: <strong>{props.data.wind}km/h</strong></span>
                             </li>        
                         </ul>          
-                            
                             </div>
                         <div className="col-5">
                             <div className="clearfix">
                                 <div className="temperature-container d-flex justify-content-end">
-                                    <img 
-                                    src={props.data.iconUrl} alt={props.data.description} className="float-left"  />
-                                <div>
-                                    <div className="float-right">
-                                        <span className="temperature">{Math.round(props.data.temperature)}</span> 
-                                        <span className="unit">°C</span>
+                                    
+                                    <div className="float-left">
+                                        <WeatherIcon code={props.data.icon} />
+                                    </div>
+                                        
+                                        <div className="float-right">
+                                            <span className="temperature">{Math.round(props.data.temperature)}</span> 
+                                            <span className="unit">°C</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
     );
 }
