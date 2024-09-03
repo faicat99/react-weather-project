@@ -31,12 +31,11 @@
  }
  
  .Weather .search-form-button {
-     background: #111111;
+     background: #f65282;
      width: 23%;
      margin: 5px;
      padding: 15px;
-     border-radius: 4px;
-     color: white;
+     color: #111111;
      font-size: 16px;
  }
  
