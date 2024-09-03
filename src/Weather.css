@@ -68,7 +68,6 @@
  
  .Weather canvas {
      margin-right: 5px;
-     
  }
  
  .Weather .temperature {
@@ -76,17 +75,23 @@
      margin-left: 10px;
      position: relative;
      top: 5px;
-     right: 10px; 
+     right: 14px; 
      color:#111111;
  }
  
  .Weather .unit {
-     font-size: 25px;
+     font-size: 20px;
      position: relative;
      top: -35px;
      right: 14px;
-     color:#111111;
+     color: #111111;
  }
+
+ .Weather a {
+     color: #f65282;
+     text-decoration: none;
+ }
+
  
  footer a {
      color: #111111;
