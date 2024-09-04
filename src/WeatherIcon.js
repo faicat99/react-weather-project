@@ -11,11 +11,15 @@ export default function WeatherIcon(props) {
         "scattered-clouds-night": "PARTLY_CLOUDY_NIGHT",
         "broken-clouds-day": "CLOUDY",
         "shower-rain-day": "RAIN",
+        "rain-day": "RAIN",
+        "rain-night": "RAIN", 
         "shower-rain-night": "RAIN",
         "snow-day": "SNOW",
         "snow-night": "SNOW",
         "mist-day": "FOG",
-        "mist-night": "FOG",    
+        "mist-night": "FOG",
+        "windy-day": "WINDY",
+        "windy-night": "WINDY"    
     };
     
     return (
