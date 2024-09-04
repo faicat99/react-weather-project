@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
                                 <span><FormattedDate date={props.data.date}/></span>
                             </li>
                             <li>
-                                <span class="text-uppercase">{props.data.description}</span>
+                                <span className="text-uppercase">{props.data.description}</span>
                             </li>
                             <li>
                                 <span>Humidity: <strong>{props.data.humidity}%</strong></span>

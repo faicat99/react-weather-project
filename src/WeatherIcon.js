@@ -20,10 +20,13 @@ export default function WeatherIcon(props) {
     
     return (
         <ReactAnimatedWeather
-        icon={codeMapping[props.code]}
+
+        icon={codeMapping[props.code] !== undefined ? codeMapping[props.code] : "CLOUDY" }
         color="#818181"
         size={props.size}
-        animate="true"
+        animate={true}
       />    
     );
 }
+
+
