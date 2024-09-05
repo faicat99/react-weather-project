@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
 import axios from "axios";
@@ -13,6 +13,7 @@ export default function WeatherForecast(props){
     }
 
     if (loaded) {
+        console.log(forecast);
         return (
             <div className="WeatherForecast">
                 <div className="row">
