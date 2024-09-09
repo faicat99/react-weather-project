@@ -91,19 +91,21 @@
  }
 
  .Weather a {
-     color: var(--branding-color);
-     text-decoration: none;
- }
+    color: var(--branding-color);
+    text-decoration: none;
+}
 
  
  footer a {
      color: #111111;
      cursor: pointer;
  }
- 
+
  footer a:hover {
-     color: var(--branding-color); 
- }
+    color: #f65282; 
+}
+ 
+
  
  footer {
      border-top: 1px solid rgb(221, 215, 215);
